@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致謝六年的陪伴｜烙角可麗露六周年慶</title>
+    <style>
+        :root {
+            --bg-color: #F9F6F0;
+            --text-color: #333333;
+            --accent-color: #6E5138;
+            --accent-light: #CBB5A1;
+            --border-color: #E6E1DA;
+            --white: #FFFFFF;
+            --alert-color: #BA5536;
+        }
+
+        body {
+            font-family: "Noto Serif TC", "YuMincho", "Hiragino Mincho ProN", serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* 頂部文案區 */
+        header { 
+            text-align: center; 
+            margin-bottom: 35px; 
+        }
+        .brand-logo { 
+            color: var(--accent-color); 
+            letter-spacing: 0.2em; 
+            border-bottom: 1px solid var(--accent-light); 
+            padding-bottom: 8px; 
+            margin-bottom: 35px; 
+            display: inline-block; 
+            font-size: 1.1rem;
+        }
+        h1 { 
+            font-size: 1.6rem; 
+            color: var(--accent-color); 
+            margin-bottom: 25px; 
+            font-weight: 500;
+        }
+        .intro-text { 
+            font-size: 0.95rem; 
+            text-align: justify; 
+            color: #444;
+        }
+
+        /* 說明細節卡片 */
+        .info-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+        }
+        .info-card h2 {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 20px;
+        }
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .info-list .label {
+            font-weight: bold;
+            min-width: 85px;
+            color: var(--accent-color);
+        }
+
+        /* 禮盒口味說明區 */
+        .flavor-intro {
+            font-size: 0.9rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .flavor-intro ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .flavor-intro li {
+            margin-bottom: 6px;
+        }
+
+        /* 產品須知區 */
+        .product-notice {
+            font-size: 0.85rem;
+            color: #555;
+        }
+        .notice-list {
+            padding-left: 20px;
+            margin: 8px 0 15px 0;
+        }
+        .notice-list li {
+            margin-bottom: 4px;
+        }
+        .shipping-alert {
+            color: var(--alert-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+            background-color: #FDF8F5;
+            padding: 10px 15px;
+            border-left: 3px solid var(--alert-color);
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* 表單填寫區樣式 */
+        .section {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+
+        label { display: block; font-size: 0.9rem; font-weight: bold; margin-bottom: 6px; color: var(--accent-color); }
+        input[type="text"], input[type="tel"], select, textarea {
+            width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; box-sizing: border-box; background-color: var(--bg-color); font-family: inherit; margin-bottom: 18px; font-size: 0.95rem;
+        }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent-color); background-color: var(--white); }
+        
+        .radio-group { display: flex; gap: 15px; margin-bottom: 18px; }
+        .radio-label { display: flex; align-items: center; font-size: 0.95rem; cursor: pointer; }
+        .radio-label input { margin-right: 6px; }
+
+        /* 總金額計算區 */
+        .total-box {
+            background-color: var(--bg-color);
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 10px;
+            border: 1px solid var(--border-color);
+        }
+        .total-price {
+            color: var(--alert-color);
+            font-size: 1.4rem;
+            margin-left: 5px;
+        }
+
+        .submit-btn {
+            width: 100%; background-color: var(--accent-color); color: var(--white); border: none; padding: 16px; font-size: 1rem; font-weight: bold; cursor: pointer; border-radius: 4px; transition: 0.3s; letter-spacing: 0.05em;
+        }
+        .submit-btn:hover { background-color: #553E2A; }
+        .hint { font-size: 0.8rem; color: #888; margin-top: -12px; margin-bottom: 18px; }
+        
+        .footer-text { text-align: center; font-size: 0.8rem; color: #999; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 頂部品牌與感恩文案 -->
+    <header>
+        <div class="brand-logo">烙角可麗露廚房</div>
+        <h1>致謝六年的陪伴</h1>
+        <div class="intro-text">
+            謝謝你們，陪「烙角」走過日常的第六個年頭 🍂<br><br>
+            六年，72 個月，無數個圍繞著可麗露焦香的烘焙日子。
+            因為有你們的喜愛，烙角才能將這份外脆內軟的法式浪漫，持續傳遞給大家。<br><br>
+            烙角六歲生日，為了回饋一直支持我們的你，我們特別推出了<strong>「連續 3 個月」的宅配免運感恩活動</strong>！讓烙角可麗露美味免運送到家。
+        </div>
+    </header>
+
+    <!-- 活動須知、禮盒內容與產品須知說明 -->
+    <div class="info-card">
+        <h2>🎁 六周年慶限定｜宅配免運專案</h2>
+        <ul class="info-list">
+            <li><span class="label">活動辦法：</span><span>預訂<strong>「滿綜合可麗露 4 盒以上」即享宅配免運費</strong></span></li>
+            <li><span class="label">活動須知：</span><span>依<strong>完成預訂且完成匯款</strong>的訂單順序計算結單。</span></li>
+            <li><span class="label">活動期間：</span><span>2026年8月起連續 3 個月，每月一次開搶購單。</span></li>
+            <li><span class="label">搶購機制：</span><span>8月「10號」<strong>準時開放預訂</strong>。為了維持手作生產的最高品質，每月數量有限，額滿即提早結單。</span></li>
+        </ul>
+
+        <!-- 禮盒口味說明 -->
+        <div class="flavor-intro">
+            <strong>🍂 綜合可麗露禮盒口味內容（每盒 $400）：</strong>
+            <ul>
+                <li>經典原味可麗露 一顆</li>
+                <li>檸檬鹽之花可麗露 一顆</li>
+                <li>味噌太妃可麗露 一顆</li>
+                <li>茶影鐵觀音可麗露 一顆</li>
+                <li>包裝規格：盒裝（附紙袋，亦可選擇不要紙袋）</li>
+            </ul>
+        </div>
+
+        <!-- 產品重要須知 -->
+        <div class="product-notice">
+            <strong style="color: var(--accent-color); display: block;">⚠️ 產品重要須知：</strong>
+            <ul class="notice-list">
+                <li>可麗露產品含酒精成分。</li>
+                <li>甜點產品皆含蛋、乳製品及麩質穀物（麵粉），如有過敏體質請避免食用。</li>
+                <li>產品圖片僅供參考，依實體為主。</li>
+            </ul>
+            <div class="shipping-alert">
+                🔺 可麗露以黑貓冷凍配送，收到後須立即冷凍。
+            </div>
+        </div>
+
+        <div style="text-align: center; color: var(--accent-color); font-weight: bold; margin-top: 25px; font-size: 0.95rem;">
+            帶上最經典的綜合口味，與家人朋友一起分享這份滿滿的謝意吧！
+        </div>
+    </div>
+
+    <!-- 訂購表單區塊 -->
+    <form id="orderForm" onsubmit="copyOrderInfo(event)">
+        
+        <!-- 數量與包裝 -->
+        <div class="section">
+            <div class="section-title">選擇品項</div>
+            
+            <label for="quantity">訂購數量 — 單盒 $400</label>
+            <!-- 更改為下拉選單，完全抹除 1-3 盒的選項 -->
+            <select id="quantity" name="quantity" onchange="calculateTotal()" required>
+                <option value="4" selected>4 盒 (免運起點)</option>
+                <option value="5">5 盒</option>
+                <option value="6">6 盒</option>
+                <option value="7">7 盒</option>
+                <option value="8">8 盒</option>
+                <option value="9">9 盒</option>
+                <option value="10">10 盒</option>
+                <option value="12">12 盒</option>
+                <option value="15">15 盒</option>
+                <option value="20">20 盒</option>
+            </select>
+            <div class="hint">＊本活動最低起購量為 4 盒</div>
+            
+            <label>包裝紙袋需求</label>
+            <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="bag" value="需要紙袋" checked> 需要紙袋</label>
+                <label class="radio-label"><input type="radio" name="bag" value="不需要紙袋"> 不需要紙袋（響應環保）</label>
+            </div>
+
+            <!-- 即時金額計算顯示 -->
+            <div class="total-box">
+                最後總金額：<span class="total-price" id="totalPriceDisplay">$1,600</span> <span style="font-size: 0.8rem; color: var(--accent-color); font-weight: normal;">(已享免運費)</span>
+            </div>
+        </div>
+
+        <!-- 填寫資料 -->
+        <div class="section">
+            <div class="section-title">收件與配送資訊</div>
+            
+            <label for="orderer_name">訂購人姓名</label>
+            <input type="text" id="orderer_name" placeholder="請輸入訂購人姓名" required>
+
+            <label for="orderer_phone">訂購人電話</label>
+            <input type="tel" id="orderer_phone" placeholder="請輸入聯絡電話" required>
+
+            <hr style="border:0; border-top:1px solid var(--border-color); margin: 15px 0 25px;">
+
+            <label for="recipient_name">收貨人姓名</label>
+            <input type="text" id="recipient_name" placeholder="請輸入收件人姓名" required>
+
+            <label for="recipient_phone">收貨人電話</label>
+            <input type="tel" id="recipient_phone" placeholder="請輸入收件人電話" required>
+
+            <label for="address">宅配地址（含郵遞區號）</label>
+            <input type="text" id="address" placeholder="請輸入完整收件地址與郵遞區號" required>
+
+            <label>希望配送日</label>
+            <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="delivery_date" value="8/20" checked> 8/20</label>
+                <label class="radio-label"><input type="radio" name="delivery_date" value="8/21"> 8/21</label>
+            </div>
+
+            <label for="delivery_time">希望收貨時段</label>
+            <select id="delivery_time">
+                <option value="不指定">不指定</option>
+                <option value="13時前">13時前</option>
+                <option value="14-18時">14-18時</option>
+            </select>
+
+            <label for="remark">備註</label>
+            <textarea id="remark" rows="3" placeholder="若有其他想對烙角說的話或特殊需求請在這邊留言"></textarea>
+
+            <button type="submit" class="submit-btn">一鍵複製訂購資訊</button>
+        </div>
+    </form>
+
+    <div class="footer-text">
+        © 2026 烙角可麗露廚房 CANELé du Quai. All Rights Reserved.
+    </div>
+</div>
+
+<script>
+    // 即時計算金額
+    function calculateTotal() {
+        const quantitySelect = document.getElementById('quantity');
+        const quantity = parseInt(quantitySelect.value) || 4;
+        const pricePerBox = 400;
+        const total = quantity * pricePerBox;
+        
+        document.getElementById('totalPriceDisplay').innerText = `$${total.toLocaleString()}`;
+    }
+
+    function copyOrderInfo(event) {
+        event.preventDefault();
+        
+        const quantity = parseInt(document.getElementById('quantity').value) || 4;
+        const pricePerBox = 400;
+        const totalAmount = quantity * pricePerBox;
+        const formattedTotal = totalAmount.toLocaleString();
+
+        const data = {
+            orderer_name: document.getElementById('orderer_name').value,
+            orderer_phone: document.getElementById('orderer_phone').value,
+            recipient_name: document.getElementById('recipient_name').value,
+            recipient_phone: document.getElementById('recipient_phone').value,
+            address: document.getElementById('address').value,
+            quantity: quantity,
+            total_price: formattedTotal,
+            bag: document.querySelector('input[name="bag"]:checked').value,
+            delivery_date: document.querySelector('input[name="delivery_date"]:checked').value,
+            delivery_time: document.getElementById('delivery_time').value,
+            remark: document.getElementById('remark').value || '無'
+        };
+        
+        const orderText = `【烙角可麗露｜預訂單】
+-----------------------
+訂購人姓名：${data.orderer_name}
+訂購人電話：${data.orderer_phone}
+收貨人姓名：${data.recipient_name}
+收貨人電話：${data.recipient_phone}
+宅配地址：${data.address}
+配送日期：${data.delivery_date}
+配送時段：${data.delivery_time}
+訂購數量：${data.quantity} 盒
+最後總金額：$${data.total_price} 元 (免運費)
+包裝需求：${data.bag}
+備註：${data.remark}
+-----------------------
+💡 資料已由網頁填寫完成，請貼上此訊息發送給烙角。`;
+
+        // === 頂級防死鎖相容性複製方案 ===
+        const textarea = document.createElement('textarea');
+        textarea.value = orderText;
+        textarea.style.position = 'fixed'; 
+        textarea.style.top = '0';
+        textarea.style.left = '0';
+        textarea.style.width = '2rem';
+        textarea.style.height = '2rem';
+        textarea.style.padding = '0';
+        textarea.style.border = 'none';
+        textarea.style.outline = 'none';
+        textarea.style.boxShadow = 'none';
+        textarea.style.background = 'transparent';
+        document.body.appendChild(textarea);
+        textarea.select();
+        textarea.setSelectionRange(0, 99999);
+
+        let success = false;
+        try {
+            success = document.execCommand('copy');
+        } catch (err) {
+            success = false;
+        }
+        document.body.removeChild(textarea);
+
+        if (!success && navigator.clipboard) {
+            navigator.clipboard.writeText(orderText);
+            success = true;
+        }
+
+        alert(`✨ 訂購資訊已成功複製到剪貼簿！\n\n💰 本次訂購總金額：$${data.total_price} 元\n\n【以下為完整複製的文字內容】：\n\n${orderText}\n\n請打開您的臉書 FB、IG 或 LINE@，直接「貼上」私訊給烙角即可！`);
+    }
+</script>
+
+</body>
+</html>
